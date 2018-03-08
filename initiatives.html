@@ -3,18 +3,185 @@
   <head>
     <meta charset="utf-8">
     <title>Initiatives</title>
-    <!-- <meta charset="utf-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <link rel="stylesheet" href="css/navbar.css">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
   </head>
   <body>
-    <ul>
-      <li><a  href="index.html">Home</a></li>
-      <li><a href="studentDirectors.html">Student Directors</a></li>
-      <li><a class="active" href="initiatives.html">Initiatives</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
-  </body>
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li ><a href="index.html">Home</a></li>
+          <li ><a href="#offcanvas-reveal" class="uk-button uk-button-default uk-margin-small-right" uk-toggle>Student Directors</a></li>
+          <li class="uk-active" ><a href="initiatives.html">Gallery</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay:true">
+    <div class="uk-offcanvas-bar">
+      <button class="uk-offcanvas-close uk-close uk-icon" type="button" uk-close="">
+        <!-- <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" ratio="1"> -->
+          <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+          <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+        <!-- </svg> -->
+      </button>
+      <ul uk-accordion>
+          <li>
+            <a class="uk-accordion-title" href="#">Content Team</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Content">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Content">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Design and Promo</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Design and Promo">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Design and Promo">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Workshops</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Workshops">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Workshops">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Events</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Events">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Events">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Xceed and K!arnival</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Xceed and K!arnival">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Xceed and K!arnival">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Industry Relations</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Industry Relations">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Industry Relations">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Guest Lecture & Brand Relation</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Guest Lecture & Brand Relation">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Guest Lecture & Brand Relation">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Finance</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Finance">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Finance">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Hospitality</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Hospitality">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Hospitality">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Logistics</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Logistics">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Logistics">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Marketing</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Marketing">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Marketing">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Media</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Media">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Media">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">HR</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="HR">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="HR">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">QAC & Alumni Relations</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="QAC & Alumni Relations">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="QAC & Alumni Relations">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Initiatives & Internal auditing</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Initiatives & Internal auditing">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Initiatives & Internal auditing">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Projects & Tech</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Projects & Tech">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Projects & Tech">Member 2</a>
+              </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Web & App</a>
+              <div class="uk-accordion-content" uk-lightbox>
+                <a  href="img/male1.jpg" data-caption="Web & App">Member 1</a><br>
+                <a  href="img/female1.png" data-caption="Web & App">Member 2</a>
+              </div>
+          </li>
+      </ul>
+    </div>
+    </div>
+    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: pull;autoplay:true">
+
+        <ul class="uk-slideshow-items" uk-height-viewport="min-height: 300">
+            <li>
+                <img src="img/1.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="img/2.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="img/3.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="img/4.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="img/5.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="img/6.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="img/7.jpg" alt="" uk-cover>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+    </div>  </body>
 </html>
