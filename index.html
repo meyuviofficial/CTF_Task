@@ -11,21 +11,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-
   </head>
   <body>
     <nav class="uk-navbar-container" uk-navbar>
       <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
           <li class="uk-active"><a href="index.html">Home</a></li>
-          <li ><a href="#offcanvas-reveal" class="uk-button uk-button-default uk-margin-small-right" uk-toggle>Student Directors</a></li>
+          <li ><a  class="uk-button uk-button-default uk-margin-small-right" uk-toggle="target:#offcanvas-reveal">Student Directors</a></li>
           <li ><a href="initiatives.html">Gallery</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
       </div>
     </nav>
-  <div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay:true">
-  <div class="uk-offcanvas-bar">
+  <div id="offcanvas-reveal" uk-offcanvas>
+  <div  class="uk-offcanvas-bar">
     <button class="uk-offcanvas-close uk-close uk-icon" type="button" uk-close="">
       <!-- <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" ratio="1"> -->
         <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
@@ -36,121 +35,359 @@
         <li>
           <a class="uk-accordion-title" href="#">Content Team</a>
             <div class="uk-accordion-content" uk-lightbox="animation:fade">
-              <a class="img" href="img/male1.jpg" data-caption="Content">Member 1</a><br>
-              <a class="img" href="img/female1.png" data-caption="Content">Member 2</a>
+              <a id="image1" href="img/male1.jpg" data-caption="Content"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image1').innerHTML=data[0].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image2" href="img/female1.png" data-caption="Content"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image2').innerHTML=data[1].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
-          <a class="uk-accordion-title" href="#">Design and Promo</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Design and Promo">Member 1
+          <a class="uk-accordion-title" href="#" onload="value()">Design and Promo</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image3" href="img/male1.jpg" data-caption="Design and Promo">
+                <script>
+                $(document).ready(function(){
+                  $.getJSON('result.json', function(data) {
+                    document.getElementById('image3').innerHTML=data[2].name;
+                    // document.getElementById('image').innerHTML=data[0].email;
+                  });
+                  });
+                </script>
               </a><br>
-              <a  href="img/female1.png" data-caption="Design and Promo">Member 2</a>
+              <a id="image4" href="img/female1.png" data-caption="Design and Promo"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image4').innerHTML=data[3].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Workshops</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Workshops">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Workshops">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image5" href="img/male1.jpg" data-caption="Workshops"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image5').innerHTML=data[4].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image6" href="img/female1.png" data-caption="Workshops"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image6').innerHTML=data[5].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Events</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Events">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Events">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image7" href="img/male1.jpg" data-caption="Events"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image7').innerHTML=data[6].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image8" href="img/female1.png" data-caption="Events"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image8').innerHTML=data[7].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Xceed and K!arnival</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Xceed and K!arnival">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Xceed and K!arnival">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image9" href="img/male1.jpg" data-caption="Xceed and K!arnival"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image9').innerHTML=data[10].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image10" href="img/female1.png" data-caption="Xceed and K!arnival"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image10').innerHTML=data[11].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Industry Relations</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Industry Relations">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Industry Relations">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image11" href="img/male1.jpg" data-caption="Industry Relations"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image11').innerHTML=data[12].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image12" href="img/female1.png" data-caption="Industry Relations"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image12').innerHTML=data[13].name;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Guest Lecture & Brand Relation</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Guest Lecture & Brand Relation">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Guest Lecture & Brand Relation">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image13" href="img/male1.jpg" data-caption="Guest Lecture & Brand Relation"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image13').innerHTML=data[14].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image14" href="img/female1.png" data-caption="Guest Lecture & Brand Relation"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image14').innerHTML=data[15].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Finance</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Finance">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Finance">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image15" href="img/male1.jpg" data-caption="Finance"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image15').innerHTML=data[16].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image16" href="img/female1.png" data-caption="Finance"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image16').innerHTML=data[17].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Hospitality</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Hospitality">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Hospitality">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image17" href="img/male1.jpg" data-caption="Hospitality"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image17').innerHTML=data[18].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image18" href="img/female1.png" data-caption="Hospitality"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image18').innerHTML=data[19].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Logistics</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Logistics">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Logistics">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image19" href="img/male1.jpg" data-caption="Logistics"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image19').innerHTML=data[20].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image20" href="img/female1.png" data-caption="Logistics"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image20').innerHTML=data[21].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Marketing</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Marketing">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Marketing">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image21" href="img/male1.jpg" data-caption="Marketing"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image21').innerHTML=data[22].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image22" href="img/female1.png" data-caption="Marketing"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image22').innerHTML=data[23].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Media</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Media">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Media">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image23" href="img/male1.jpg" data-caption="Media"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image23').innerHTML=data[24].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image24" href="img/female1.png" data-caption="Media"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image24').innerHTML=data[25].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">HR</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="HR">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="HR">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image25" href="img/male1.jpg" data-caption="HR"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image25').innerHTML=data[26].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image26" href="img/female1.png" data-caption="HR"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image26').innerHTML=data[27].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">QAC & Alumni Relations</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="QAC & Alumni Relations">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="QAC & Alumni Relations">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image27" href="img/male1.jpg" data-caption="QAC & Alumni Relations"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image27').innerHTML=data[28].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image28" href="img/female1.png" data-caption="QAC & Alumni Relations"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image28').innerHTML=data[29].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Initiatives & Internal auditing</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Initiatives & Internal auditing">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Initiatives & Internal auditing">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image29" href="img/male1.jpg" data-caption="Initiatives & Internal auditing"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image29').innerHTML=data[30].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image30" href="img/female1.png" data-caption="Initiatives & Internal auditing"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image30').innerHTML=data[31].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Projects & Tech</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Projects & Tech">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Projects & Tech">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image31" href="img/male1.jpg" data-caption="Projects & Tech"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image31').innerHTML=data[32].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image32" href="img/female1.png" data-caption="Projects & Tech"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image32').innerHTML=data[33].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
         <li>
           <a class="uk-accordion-title" href="#">Web & App</a>
-            <div class="uk-accordion-content" uk-lightbox>
-              <a  href="img/male1.jpg" data-caption="Web & App">Member 1</a><br>
-              <a  href="img/female1.png" data-caption="Web & App">Member 2</a>
+            <div class="uk-accordion-content" uk-lightbox="animation:fade">
+              <a id="image33" href="img/male1.jpg" data-caption="Web & App"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image33').innerHTML=data[34].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a><br>
+              <a id="image34" href="img/female1.png" data-caption="Web & App"><script>
+              $(document).ready(function(){
+                $.getJSON('result.json', function(data) {
+                  document.getElementById('image34').innerHTML=data[35].name;
+                  // document.getElementById('image').innerHTML=data[0].email;
+                });
+                });
+              </script></a>
             </div>
         </li>
     </ul>
