@@ -1,4 +1,4 @@
- [
+[
   {
     "name": "Greene Bean",
     "email": "greenebean@bovis.com"
@@ -32,6 +32,9 @@
     "email": "hornephelps@bovis.com"
   },
   {
+    "name": "Abbott Levine",
+  },
+  {
     "name": "Rush Dodson",
     "email": "rushdodson@bovis.com"
   },
@@ -54,6 +57,7 @@
   {
     "name": "Lucile Sharpe",
     "email": "abbottlevine@bovis.com"
+    "email": "lucilesharpe@bovis.com"
   },
   {
     "name": "Rivers Hobbs",
