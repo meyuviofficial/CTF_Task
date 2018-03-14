@@ -13,7 +13,9 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-    $.getJSON('result.json', function(data) {
+    var url='https://api.myjson.com/bins/hu2yd';
+    $.getJSON(url, function(data) {
+      console.log(data);
       for(var i = 0; i<34 ; i++)
       {
         var var1= 'image_'+i;
@@ -25,9 +27,7 @@
 
 </script>
   </head>
-  <div id="hello_0"></div>
-  <div id="hello_1"></div>
-  <div id="hello_2"></div>
+
   <body>
     <nav class="uk-navbar-container" uk-navbar>
       <div class="uk-navbar-left">
